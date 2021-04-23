@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block body %}
+<html lang="en">
+<head>
+ 
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1">Vehicle Performance</span>
+    </nav>
+
+    <div class="container">
+
+        <form action="\vehicleperformance" method="post">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Name</h5>
+                            
+                            <select name="name" id="name" required="required">
+                                <option value="ford">ford</option>
+                                <option value="chevrolet">chevrolet</option>
+                                <option value="plymouth">plymouth</option>
+                                <option value="dodge">dodge</option>
+                                <option value="amc">amc</option>
+                                <option value="toyota">toyota</option>
+                                <option value="datsun">datsun</option>
+                                <option value="volkswagen">volkswagen</option>
+                                <option value="buick">buick</option>
+                                <option value="pontiac">pontiac</option>
+                                <option value="honda">honda</option>
+                                <option value="mazda">mazda</option>
+                                <option value="mercury">mercury</option>
+                                <option value="oldsmobile">oldsmobile</option>
+                                <option value="others">others</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <br>
+ 
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Origin Country</h5>
+                            
+                            <select name="origin" id="origin" required="required">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+ 
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Manufactured Year</h5>
+                            
+                            <input type="year" name="year" id="year" required="required">
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+ 
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Displacement</h5>
+                            
+                            <input type="number" name="displacement" id="displacement" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Weight</h5>
+                            
+                            <input type="number" name="weight" id="weight" required="required">
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Horsepower</h5>
+                            
+                            <input type="number" name="horsepower" id="horsepower" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Acceleration</h5>
+                            
+                            <input type="number" name="acceleration" id="acceleration" required="required">
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cylinders</h5>
+                            <select name="cylinders" id="cylinders" required="required">
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="8">8</option>
+                            </select>
+                            <input type="submit" value="Submit" class="btn btn-primary" onclick="scrollWin(0,50)" >
+                            <a class="btn btn-secondary"href="{{ url_for('home') }}">Back</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>   
+        <center><h3>{{ prediction_text }} </h3></center>
+        <center><p>©2021 Mohammed Siddiq</p></center>
+    </div>
+       
+</body>
+</html>
+
+{% endblock %}
+

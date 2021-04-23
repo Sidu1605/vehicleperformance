@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- Image and text -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="https://i.pinimg.com/originals/ca/d9/11/cad911eca761152a9eb515b5de8ae115.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        M.S Analytics
+    </a>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img style="height: 300px; width:286px" class="card-img-top" src="https://content.audiospace.co/stations/40/files/Directory/AdobeStock_120349760.jpeg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Vehicle Performance</h5>
+                  <p class="card-text">Predicting Car's Mileage (Km/l)</p>
+                  <a href="{{ url_for('vehicleperformance') }}" class="btn btn-primary">Predict</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
